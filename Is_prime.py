@@ -15,3 +15,20 @@ def is_prime(num):
 n = int(input())
 # вызываем функцию
 print(is_prime(n))
+
+'''
+Напишите функцию get_next_prime(num), которая принимает в качестве аргумента натуральное число num 
+и возвращает первое простое число большее числа num.
+'''
+# объявление функции
+def get_next_prime(num):
+    cur_num = num + 1  # начинаем искать следующее простое число
+    while not is_prime(cur_num):  # если следующее число непростое, то увеличиваем на 1
+        cur_num += 1
+    return cur_num
+
+
+# считываем данные
+n = int(input())
+# вызываем функцию
+print(get_next_prime(n))
